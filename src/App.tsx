@@ -1,17 +1,15 @@
 import React from 'react';
+import { HashRouter as Router, Route } from 'react-router-dom';
 import logo from './logo.svg';
 import './App.css';
-import { Counter } from './components/counter/Counter';
+import StartPage from './pages/start-page/StartPage';
 
 const App: React.FC = () => {
     return (
-        <div className="App">
-            <header className="App-header">
-                <img src={logo} className="App-logo" alt="logo" />
-
-                <Counter />
-            </header>
-        </div>
+        <Router>
+            <header>Haader</header>
+            <Route path="/" component={StartPage} />
+        </Router>
     );
 };
 
