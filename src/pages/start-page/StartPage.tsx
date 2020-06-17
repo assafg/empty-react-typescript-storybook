@@ -1,12 +1,12 @@
 import React, { ReactElement } from 'react';
-import { Counter } from '../../components/counter/Counter';
+import RecordsList from '../../components/records/RecordsList';
 
 interface Props {}
 
 export default function StartPage(_: Props): ReactElement {
     return (
         <div>
-            <Counter />
+            <RecordsList resource="users" />
         </div>
     );
 }
