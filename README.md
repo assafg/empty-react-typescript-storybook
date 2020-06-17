@@ -3,4 +3,4 @@
 Created using `create-react-app --typescript`
 
 Should save time when bootstrapping a new project
-Feel free to clone / frok :)
+Feel free to clone / fork :)

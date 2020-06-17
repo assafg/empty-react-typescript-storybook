@@ -1,13 +1,12 @@
-import React, { ReactElement } from 'react'
+import React, { ReactElement } from 'react';
+import { Counter } from '../../components/counter/Counter';
 
-interface Props {
-    
-}
+interface Props {}
 
-export default function StartPage({}: Props): ReactElement {
+export default function StartPage(_: Props): ReactElement {
     return (
         <div>
-            Home Page
+            <Counter />
         </div>
-    )
+    );
 }
