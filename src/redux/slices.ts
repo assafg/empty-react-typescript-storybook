@@ -1,22 +1,27 @@
 import { createSlice } from '@reduxjs/toolkit';
+import { Record } from '../types/records';
 
-const counterSlice = createSlice({
-    name: 'counter',
-    initialState: 0,
-    reducers: {
-        increment: (state) => state + 1,
-        decrement: (state) => state - 1,
-    },
-});
+type RecordsState = {
+    records: Record[];
+    isLoading: boolean;
+};
+
+let initialState: RecordsState = {
+    records: [],
+    isLoading: true,
+};
 
 const recordsSlice = createSlice({
-    name: 'records',
-    initialState: [],
+    name: 'recordsState',
+    initialState,
     reducers: {
-        fetched: (state, action) => action.payload.data,
+        fetched: (state, action) => {
+            return {
+                records: action.payload.data,
+                isLoading: action.payload.loading,
+            };
+        },
     },
 });
 
-console.log('recordsSlice', recordsSlice);
-
-export { counterSlice, recordsSlice };
+export { recordsSlice };

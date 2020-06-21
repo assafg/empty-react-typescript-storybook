@@ -1,16 +1,8 @@
 import React from 'react';
 import useResource from '../../hooks/useResource';
+import { Record, RecordsListProps } from '../../types/records';
 
-interface Record {
-    id: string;
-    name: string;
-}
-
-interface ResourceListProps {
-    resource: string;
-}
-
-const ResourceList = ({ resource }: ResourceListProps) => {
+const RecordsList = ({ resource }: RecordsListProps) => {
     const records: Record[] = useResource(resource);
 
     return (
@@ -22,4 +14,4 @@ const ResourceList = ({ resource }: ResourceListProps) => {
     );
 };
 
-export default ResourceList;
+export default RecordsList;

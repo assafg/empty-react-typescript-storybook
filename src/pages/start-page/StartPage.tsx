@@ -4,9 +4,5 @@ import RecordsList from '../../components/records/RecordsList';
 interface Props {}
 
 export default function StartPage(_: Props): ReactElement {
-    return (
-        <div>
-            <RecordsList resource="users" />
-        </div>
-    );
+    return <RecordsList resource="users" />;
 }
