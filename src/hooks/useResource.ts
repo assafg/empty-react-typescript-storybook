@@ -19,7 +19,6 @@ const useResource = (resource: string): Record[] => {
             dispatch(
                 recordsSlice.actions.fetched({
                     data: response.data,
-                    loading: !response.data.length,
                 })
             );
         },

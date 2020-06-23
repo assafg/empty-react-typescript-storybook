@@ -15,11 +15,10 @@ const recordsSlice = createSlice({
     name: 'recordsState',
     initialState,
     reducers: {
-        fetched: (state, action) => {
-            return {
-                records: action.payload.data,
-                isLoading: action.payload.loading,
-            };
+        fetched: ({ records, isLoading }, action) => {
+            records = action.payload.data;
+            isLoading = false;
+            return { records, isLoading };
         },
     },
 });
